@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/bactroid/outofoffice/issues"
   },
-  "homepage": "https://github.com/bactroid/outofoffice#readme"
+  "homepage": "https://github.com/bactroid/outofoffice#readme",
+  "dependencies": {
+    "moment": "^2.20.1"
+  }
 }
