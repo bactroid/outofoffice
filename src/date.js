@@ -1,5 +1,4 @@
 const moment = require('moment')
-const R = require('ramda')
 
 const daysOfWeek = {
   1: 'Monday',
@@ -11,9 +10,9 @@ const daysOfWeek = {
   7: 'Sunday'
 }
 
-// String -> String
-const getDayOfWeek = date => daysOfWeek[moment(date).isoWeekday()]
+// outputOutlookDateString :: String -> String
+const outputOutlookDateString = date => moment(date).format('dddd, MMMM D, ')
 
 module.exports = {
-  getDayOfWeek
+  outputOutlookDateString
 }

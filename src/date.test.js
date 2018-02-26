@@ -1,7 +1,7 @@
-const {getDayOfWeek} = require('./date.js')
+const {outputOutlookDateString} = require('./date.js')
 
-describe('dayOfWeek', () => {
-  test('Returns a String with English day of week for an ISO 8601 date string', () => {
-    expect(getDayOfWeek('2018-02-26')).toBe('Monday')
+describe('outputOutlookDateString', () => {
+  test('Returns a string in the format "Monday, February 26" based on ISO 8601 date string', () => {
+    expect(outputOutlookDateString('2018-02-26')).toBe('Monday, February 26, ')
   })
 })
