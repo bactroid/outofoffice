@@ -11,7 +11,7 @@ const daysOfWeek = {
 }
 
 // outputOutlookDateString :: String -> String
-const outputOutlookDateString = date => moment(date).format('dddd, MMMM D, ')
+const outputOutlookDateString = date => moment(date).format('dddd, MMMM D')
 
 module.exports = {
   outputOutlookDateString
