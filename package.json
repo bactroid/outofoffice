@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "A script to generate out-of-office text to use in my Outlook autoresponder.",
   "main": "index.js",
+  "standard": {
+    "globals": [
+      "describe",
+      "test",
+      "expect"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
