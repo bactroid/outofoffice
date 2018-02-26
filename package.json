@@ -2,7 +2,7 @@
   "name": "outofoffice",
   "version": "1.0.0",
   "description": "A script to generate out-of-office text to use in my Outlook autoresponder.",
-  "main": "index.js",
+  "main": "outofoffice.js",
   "standard": {
     "globals": [
       "describe",
