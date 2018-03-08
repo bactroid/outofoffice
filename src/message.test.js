@@ -12,9 +12,14 @@ describe('getMessageJSON', () => {
 })
 
 describe('getMessageText', () => {
-  test('Returns text from message.json', async () => {
+  test('Returns date range text from message.json', async () => {
     const expected = 'I will be out of the office from STARTDT, through ENDDT.\n\nFor immediate assistance, please reach out the UF Computing Help Desk at 352-392-4357. Their service desk will create a support ticket and will get in touch with UFIT personnel who can assist you in my absence.'
     await expect(message.getMessageText()).resolves.toEqual(expected)
+  })
+
+  test('Returns the single-day text from message.json', async () => {
+    const expected = 'I will be out of the office on STARTDT.\n\nFor immediate assistance, please reach out the UF Computing Help Desk at 352-392-4357. Their service desk will create a support ticket and will get in touch with UFIT personnel who can assist you in my absence.'
+    await expect(message.getMessageText('single-day')).resolves.toEqual(expected)
   })
 })
 

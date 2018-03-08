@@ -9,7 +9,7 @@ const getMessageJSON = () =>
       readFileAsync('./message.json', 'utf8').then(JSON.parse)
 
 // getMessageText :: null -> Promise String
-const getMessageText = () => getMessageJSON().then(x => x.message)
+const getMessageText = (prop = 'message') => getMessageJSON().then(x => x[prop])
 
 const replaceDatePlaceholders = (startDate, endDate) => {
   return getMessageText()
