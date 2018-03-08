@@ -12,7 +12,10 @@ const getMessageJSON = () =>
 const getMessageText = (prop = 'message') => getMessageJSON().then(x => x[prop])
 
 const replaceDatePlaceholders = (startDate, endDate) => {
-  return getMessageText()
+  const prop = endDate
+        ? 'message'
+        : 'single-day'
+  return getMessageText(prop)
     .then(s => s.replace('STARTDT', date.outputOutlookDateString(startDate)))
     .then(s => s.replace('ENDDT', date.outputOutlookDateString(endDate)))
 }
